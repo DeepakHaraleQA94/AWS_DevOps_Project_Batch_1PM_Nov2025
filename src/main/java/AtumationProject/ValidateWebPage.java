@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
+
 public class ValidateWebPage {
 
 @Test	
@@ -19,7 +21,7 @@ public void test1() throws InterruptedException {
 		
 		String title = driver.getTitle();
 		System.out.println(title);
-		
+		System.out.println("hello");
 		
 		if(title.equals("About Us | Puneri Pattern")) {
 			System.out.println("success");
